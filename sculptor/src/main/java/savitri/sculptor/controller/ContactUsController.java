@@ -13,37 +13,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import savitri.sculptor.model.Feedback;
-import savitri.sculptor.model.Registration;
-import savitri.sculptor.service.FeedbackService;
+import savitri.sculptor.model.ContactUs;
+
+import savitri.sculptor.service.ContactUsService;
+
 
 @CrossOrigin(origins= "http://localhost:4200")
 @RestController
-@RequestMapping("/feedback/")
-public class FeedbackController {
-
+@RequestMapping("/contactus")
+public class ContactUsController {
 	@Autowired
-	private FeedbackService fs;
+	private ContactUsService cn;
 	
-	@GetMapping("/feedbacks")
-	public List<Feedback> handleget()
+	@GetMapping("/contact")
+	public List<ContactUs> handleget()
 	{
-		return fs.getAll();
+		return cn.getAll();
 	}
-	@PostMapping("/addfeed")
-	public Feedback add(@RequestBody Feedback r)
+	@PostMapping("/addcon")
+	public ContactUs add(@RequestBody ContactUs r)
 	{
-		return fs.insertrecord(r);
+		return cn.insertrecord(r);
 	}
 	@DeleteMapping("/delfeed/{rid}")
 	public void delr(@PathVariable("rid")int r)
 	{
-		fs.del(r);
+		cn.del(r);
 	}
 	@PutMapping("/upfeed/{rid}")
-	public Feedback update(@PathVariable("rid")int i,@RequestBody Feedback r) 
+	public ContactUs update(@PathVariable("rid")int i,@RequestBody ContactUs r) 
 	{
-		return fs.updaterecord(i,r);
+		return cn.updaterecord(i,r);
 		
 	}
 }

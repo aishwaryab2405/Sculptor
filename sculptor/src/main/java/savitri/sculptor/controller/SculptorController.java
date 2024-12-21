@@ -22,10 +22,11 @@ package savitri.sculptor.controller;
 	import org.springframework.web.bind.annotation.RestController;
 	import org.springframework.web.multipart.MultipartFile;
 import jakarta.servlet.http.HttpServletRequest;
+import savitri.sculptor.filework.FileStorageService;
 import savitri.sculptor.model.ImageModel;
 import savitri.sculptor.model.Sculptor;
 import savitri.sculptor.repository.SculptorRepository;
-import savitri.sculptor.service.FileStorageService;
+
 
 	
 	@RestController

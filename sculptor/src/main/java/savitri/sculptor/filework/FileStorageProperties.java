@@ -1,4 +1,4 @@
-package savitri.sculptor.service;
+package savitri.sculptor.filework;
 
 	import org.springframework.boot.context.properties.ConfigurationProperties;
 	import org.springframework.stereotype.Component;

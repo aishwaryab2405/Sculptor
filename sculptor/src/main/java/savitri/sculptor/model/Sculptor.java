@@ -28,12 +28,7 @@ import jakarta.persistence.ManyToMany;
 
 
 
-	public Set<ImageModel> getSculptorImages() {
-		return SculptorImages;
-	}
-	public void setSculptorImages(Set<ImageModel> SculptorImages) {
-		this.SculptorImages = SculptorImages;
-	}
+	
 	public Sculptor() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -71,7 +66,12 @@ import jakarta.persistence.ManyToMany;
 		this.price = price;
 	}
 
-
+	public Set<ImageModel> getSculptorImages() {
+		return SculptorImages;
+	}
+	public void setSculptorImages(Set<ImageModel> SculptorImages) {
+		this.SculptorImages = SculptorImages;
+	}
 
 	}
 
